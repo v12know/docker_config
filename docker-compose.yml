@@ -1,0 +1,11 @@
+version: '3'
+services:
+  conda:
+    image: conda2:1.0
+#    ports:
+#      - 8888
+    volumes:
+      - ~/workspaces/docker/conda/envs:/opt/conda/envs
+      - ~/workspaces/python/trade/rqalpha_mod_ctp/rqalpha_mod_ctp:/opt/python/rqalpha_mod_ctp
+      - ~/workspaces/python/trade/ctpwrapper/build/lib.linux-x86_64-3.6/ctpwrapper:/opt/python/ctpwrapper
+      - ~/.rqalpha:/root/.rqalpha
